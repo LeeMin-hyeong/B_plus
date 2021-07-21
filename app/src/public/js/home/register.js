@@ -1,18 +1,28 @@
 "use strict";
 
 const id=document.querySelector("#id"),
+    name=document.querySelector("#name"),
+    stdNo=document.querySelector("#stdNo"),
     password=document.querySelector("#pw"),
+    confirmPassword=document.querySelector("#cfpw"),
     button=document.querySelector("#button");
 
-button.addEventListener("click", login);
+button.addEventListener("click", register);
 
-function login() {
+function register() {
+    if(!id.value)
+        return alert("please enter your ID.")
+    if(password.value!==confirmPassword.value)
+        return alert("password does not match.")
+    
     const req={
         id: id.value,
+        name: name.value,
+        stdNo: stdNo.value,
         password: password.value,
     };
 
-    fetch("/login", {
+    fetch("/register", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -22,7 +32,7 @@ function login() {
     .then((res)=>res.json())
     .then((res)=>{
         if(res.success){
-            location.href="/";
+            location.href="/login";
         }else{
             alert(res.msg);
         }

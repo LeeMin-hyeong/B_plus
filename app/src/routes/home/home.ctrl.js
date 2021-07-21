@@ -1,36 +1,29 @@
 "use restrict";
 
-const users={
-    id: ["a", ],
-    password: ["a", ],
-};
+const User = require("../../models/user");
 
 const output={
-    home: (req, res)=> {
+    home: (req, res)=>{
     res.render("home/index");
     },
-    login: (req, res)=> {
+    login: (req, res)=>{
     res.render("home/login");
+    },
+    register: (req, res)=>{
+        res.render("home/register")
     },
 };
 
 const process={
-    login: (req, res)=> {
-        const id=req.body.id,
-            password=req.body.password;
-        
-        if(users.id.includes(id)){
-            const idx=users.id.indexOf(id);
-            if(users.password[idx]===password){
-                return res.json({
-                    success: true,
-                });
-            }
-        }
-        return res.json({
-            success: false,
-            msg: "login failed."
-        });
+    login: async (req, res)=> {
+        const user=new User(req.body);
+        const response=await user.login();
+        return res.json(response);
+    },
+    register: async (req, res)=>{
+        const user=new User(req.body);
+        const response=await user.register();
+        return res.json(response);
     },
 };
 

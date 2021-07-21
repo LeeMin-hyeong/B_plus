@@ -1,17 +1,16 @@
 {
   "dependencies": {
-    "body-parser": "^1.19.0",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "mysql": "^2.18.1"
   },
-  "name": "js_practice",
+  "name": "b_plus",
   "description": "",
   "version": "1.0.0",
   "main": "app.js",
   "bin": {
-    "js_practice": "www.js"
+    "B_plus": "www.js"
   },
   "scripts": {
     "start": "nodemon ./bin/www.js",
@@ -19,13 +18,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LeeMin-hyeong/js_practice.git"
+    "url": "git+https://github.com/LeeMin-hyeong/B_plus.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LeeMin-hyeong/js_practice/issues"
+    "url": "https://github.com/LeeMin-hyeong/B_plus/issues"
   },
-  "homepage": "https://github.com/LeeMin-hyeong/js_practice#readme",
+  "homepage": "https://github.com/LeeMin-hyeong/B_plus#readme",
   "keywords": []
 }

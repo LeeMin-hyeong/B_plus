@@ -1,1 +1,1 @@
-# B_plus
+# B+ SSU CSE Student Council Web Page Project

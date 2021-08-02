@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "cookie-parser": "^1.4.5",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
@@ -26,5 +27,8 @@
     "url": "https://github.com/LeeMin-hyeong/B_plus/issues"
   },
   "homepage": "https://github.com/LeeMin-hyeong/B_plus#readme",
-  "keywords": []
+  "keywords": [],
+  "optionalDependencies": {
+    "fsevents": "*"
+  }
 }

@@ -1,0 +1,6 @@
+PORT=3000
+
+DB_HOST="ssu-cse-stdcouncil-web-db.cv1anqv3pxin.ap-northeast-2.rds.amazonaws.com"
+DB_USER="admin"
+DB_PASSWORD="zjavbxjgkrqn"
+DB_DATABASE="stdcouncil_web_db"

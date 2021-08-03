@@ -18,8 +18,8 @@ class User{
             const user=await UserStorage.getUserInfo(client.id);
             if(user){
                 if(user.id===client.id&&user.password===client.password){
-                    res.cookie("client", user.id, 
-                    {expires: new Date(Date.now() + 450000), httpOnly: true});
+                    // res.cookie("client", user.id, 
+                    // {expires: new Date(Date.now() + 450000), httpOnly: true});
                     return {success: true};
                 }
                 return {success: false, msg: "wrong password."};
